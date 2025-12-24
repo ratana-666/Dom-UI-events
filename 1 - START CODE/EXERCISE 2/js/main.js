@@ -15,5 +15,13 @@ function getRandomHexColor() {
 // -	Generate a random color
 // -	Set the body background color with this color
 // -	Set the color label with the value of this color
- 
 
+ 
+const button = document.querySelector('button'); 
+const colorLabel = document.querySelector('#result-color');
+
+button.addEventListener('click', () => {
+    const newColor = getRandomHexColor();
+    document.body.style.backgroundColor = newColor;
+    colorLabel.textContent = newColor;
+});
